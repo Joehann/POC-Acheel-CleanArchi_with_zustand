@@ -1,0 +1,20 @@
+.user-card {
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #fff;
+  width: 250px;
+  border-radius: 12px;
+}
+
+.user-card button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-card button:hover {
+  background-color: #fff;
+  color: #000;
+}
