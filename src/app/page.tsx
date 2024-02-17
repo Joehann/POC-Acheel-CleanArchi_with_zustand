@@ -1,31 +1,22 @@
 'use client'
-import { useEffect, useState } from 'react'
-import UserCard from './client/ui/core-react/components/cards/UserCard'
+import { ReactElement } from 'react'
+import UserList from './client/modules/user/ui/react/pages/UserList'
+import useUserManagementStore from './client/modules/user/ui/store/UserManagementStore'
 
 export default function Home() {
-  const [users, setUsers] = useState<User[] | null>(null)
-
-  const fetchUsers = async () => {
-    const res = await fetch('http://localhost:3000/api/get-users')
-    setUsers(await res.json())
+  const { display } = useUserManagementStore()
+  const displayData: DisplayData = {
+    list: {
+      component: UserList,
+    },
   }
 
-  useEffect(() => {
-    void fetchUsers()
-  }, [])
-  if (!users) return <p>Loading...</p>
-  return (
-    <div className="cards">
-      {users.map((u) => (
-        <UserCard key={u.id} data={u} />
-      ))}
-    </div>
-  )
+  const Component = displayData[display].component
+  return <Component />
 }
 
-export type User = {
-  id: number
-  firstname: string
-  lastname: string
-  phone: string
+type DisplayData = {
+  [uuid: string]: {
+    component: () => ReactElement
+  }
 }

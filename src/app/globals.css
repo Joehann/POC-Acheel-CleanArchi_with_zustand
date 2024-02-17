@@ -100,12 +100,6 @@ a {
   text-decoration: none;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
