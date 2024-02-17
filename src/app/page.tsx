@@ -1,17 +1,17 @@
 'use client'
 import { ReactElement } from 'react'
-import UserList from '../client/modules/user/ui/react/sections/UserList'
-import useUserManagementStore from '../client/modules/user/ui/store/UserManagementStore'
+import WorkList from '../client/modules/work/ui/react/sections/WorkList'
+import useWorkStore from '@/client/modules/work/ui/store/WorkStoresrc'
 
 export default function Home() {
-  const { display } = useUserManagementStore()
+  const store = useWorkStore()
   const displayData: DisplayData = {
     list: {
-      component: UserList,
+      component: WorkList,
     },
   }
 
-  const Component = displayData[display].component
+  const Component = displayData[store.display].component
   return <Component />
 }
 
