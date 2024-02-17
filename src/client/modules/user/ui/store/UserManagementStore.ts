@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { User } from '../../models/User'
+import { User } from '../../core-logic/models/User'
 
 const useUserManagementStore = create<UserManagementStoreType>((set) => ({
   users: [],

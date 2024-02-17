@@ -1,4 +1,4 @@
-import { User } from '../../models/User'
+import { User } from '../models/User'
 
 const getUserFormatter = (users: User[]): User[] => {
   return users.map((user) => {

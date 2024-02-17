@@ -1,7 +1,7 @@
 'use client'
 import { ReactElement } from 'react'
-import UserList from './client/modules/user/ui/react/pages/UserList'
-import useUserManagementStore from './client/modules/user/ui/store/UserManagementStore'
+import UserList from '../client/modules/user/ui/react/sections/UserList'
+import useUserManagementStore from '../client/modules/user/ui/store/UserManagementStore'
 
 export default function Home() {
   const { display } = useUserManagementStore()

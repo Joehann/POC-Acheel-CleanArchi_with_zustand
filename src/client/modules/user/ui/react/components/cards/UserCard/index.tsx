@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import style from './user-card.module.css'
-import type { User } from '@/app/client/modules/user/models/Usersrc'
-import useUserManagementStore from '@/app/client/modules/user/ui/store/UserManagementStoresrc'
+import type { User } from '@/client/modules/user/core-logic/models/Usersrc'
+import useUserManagementStore from '@/client/modules/user/ui/store/UserManagementStoresrc'
 
 const UserCard = ({ data }: UserCardProps): ReactElement => {
   const { setDisplay } = useUserManagementStore()
