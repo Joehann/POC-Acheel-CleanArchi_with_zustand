@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import WorkCard from '../../components/cards/WorkCard'
 import style from './works-list.module.css'
 import useWorkPresenter from '../../presenters/useWork.presenter'
-import useWorkStore from '../../../store/WorkStore'
+import useWorkStore from '../../../store/workStore'
 
 const WorkList = () => {
   const store = useWorkStore()

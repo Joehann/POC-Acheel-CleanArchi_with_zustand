@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import style from './work-card.module.css'
 import type { Work } from '@/client/modules/work/core-logic/models/Worksrc'
+import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButtonsrc'
 
 const WorkCard = ({ data }: WorkCardProps): ReactElement => {
   return (
@@ -9,7 +10,10 @@ const WorkCard = ({ data }: WorkCardProps): ReactElement => {
       <p>Lastname : {data.lastname}</p>
       <p>Title: {data.title}</p>
       <p>For : {data.for}</p>
-      <button>Modifier</button>
+      <PrimaryButton
+        label="Modifier"
+        onClick={() => alert(`Modification de : ${data.title}`)}
+      />
     </div>
   )
 }

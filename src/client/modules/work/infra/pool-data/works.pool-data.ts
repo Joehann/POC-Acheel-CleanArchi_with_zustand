@@ -38,7 +38,7 @@ export const works = [
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f5a5a3784b6f',
     firstname: 'Duke',
     lastname: 'Ellington',
-    title: 'Take the A Train',
+    title: 'Caravan',
     for: 'big band',
   },
   {

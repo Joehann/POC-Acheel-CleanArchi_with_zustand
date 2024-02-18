@@ -1,5 +1,5 @@
-import { WorkGateway } from '../gateways/works.gateway'
-import { Work } from '../models/Work'
+import { WorkGateway } from '../../gateways/works.gateway'
+import { Work } from '../../models/Work'
 
 const getWorksList = async (gateway: WorkGateway): Promise<Work[]> => {
   const works = await gateway.getWorks()

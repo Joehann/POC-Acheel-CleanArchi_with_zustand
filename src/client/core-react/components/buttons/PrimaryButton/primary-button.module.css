@@ -1,0 +1,12 @@
+.primary-button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #fff;
+  color: #000;
+}

@@ -1,4 +1,4 @@
-import workHttpActionsStub from '../../infra/actions/work.action.stub'
+import workHttpActionsStub from '../../../infra/actions/work.action.stub'
 import getWorksList from './get-works-list.usecase'
 
 describe('GetWorksListUsecase', () => {
