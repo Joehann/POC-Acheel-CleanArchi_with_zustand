@@ -5,9 +5,10 @@ import type { Work } from '@/client/modules/work/core-logic/models/Worksrc'
 const WorkCard = ({ data }: WorkCardProps): ReactElement => {
   return (
     <div className={style['work-card']}>
-      <p>Prénom : {data.firstname}</p>
-      <p>Nom : {data.lastname}</p>
-      <p>Tel: {data.phone}</p>
+      <p>Firstname : {data.firstname}</p>
+      <p>Lastname : {data.lastname}</p>
+      <p>Title: {data.title}</p>
+      <p>For : {data.for}</p>
       <button>Modifier</button>
     </div>
   )

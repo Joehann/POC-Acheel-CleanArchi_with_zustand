@@ -1,6 +1,6 @@
 'use client'
 import { ReactElement } from 'react'
-import WorkList from '../client/modules/work/ui/react/sections/WorkList'
+import WorkList from '../client/modules/work/ui/react/sections/WorksList'
 import useWorkStore from '@/client/modules/work/ui/store/WorkStoresrc'
 
 export default function Home() {
