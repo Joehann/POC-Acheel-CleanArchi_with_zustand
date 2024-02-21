@@ -6,6 +6,8 @@ import style from './chose-restaurant.module.css'
 const ChoseRestaurant = (): ReactElement => {
   const store = useRestaurantStore()
 
+  console.log(store.restaurants)
+
   return (
     <div className={style['chose-restaurant']}>
       <div className={style['title-line']}>
