@@ -1,8 +1,8 @@
 'use client'
 /* eslint-disable react-hooks/exhaustive-deps */
-import useRestaurantPresenter from '@/client/modules/restaurant/ui/react/presenters/useRestaurant.presentersrc'
-import ChoseRestaurant from '@/client/modules/restaurant/ui/react/sections/ChoseRestaurantsrc'
-import RestaurantsList from '@/client/modules/restaurant/ui/react/sections/RestaurantsListsrc'
+import useRestaurantPresenter from '@/client/modules/restaurant/ui/presentation-react/presenters/useRestaurant.presentersrc'
+import ChooseRestaurant from '@/client/modules/restaurant/ui/presentation-react/sections/ChooseRestaurantsrc'
+import RestaurantsList from '@/client/modules/restaurant/ui/presentation-react/sections/RestaurantsListsrc'
 import useRestaurantStore from '@/client/modules/restaurant/ui/store/restaurantStoresrc'
 import { ReactElement, useEffect } from 'react'
 
@@ -15,8 +15,8 @@ export default function Home() {
   }, [])
 
   const displayData: DisplayData = {
-    chose: {
-      component: ChoseRestaurant,
+    choose: {
+      component: ChooseRestaurant,
     },
     list: {
       component: RestaurantsList,

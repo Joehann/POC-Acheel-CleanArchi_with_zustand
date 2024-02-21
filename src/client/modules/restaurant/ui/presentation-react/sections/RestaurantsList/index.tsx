@@ -11,10 +11,10 @@ const RestaurantsList = () => {
   return (
     <div className={style['restaurants-list']}>
       <div className={style['title-line']}>
-        <h1>Listes des restaurants</h1>
+        <h1>Liste des restaurants</h1>
         <PrimaryButton
-          label="Retour"
-          onClick={() => store.setDisplay('chose')}
+          label="Choisir un restaurant"
+          onClick={() => store.setDisplay('choose')}
         />
       </div>
       <div className={style['list']}>

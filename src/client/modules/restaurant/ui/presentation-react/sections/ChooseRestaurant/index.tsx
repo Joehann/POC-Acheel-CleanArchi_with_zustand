@@ -1,15 +1,15 @@
 import { ReactElement } from 'react'
 import useRestaurantStore from '../../../store/restaurantStore'
 import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButtonsrc'
-import style from './chose-restaurant.module.css'
+import style from './choose-restaurant.module.css'
 
-const ChoseRestaurant = (): ReactElement => {
+const ChooseRestaurant = (): ReactElement => {
   const store = useRestaurantStore()
 
   console.log(store.restaurants)
 
   return (
-    <div className={style['chose-restaurant']}>
+    <div className={style['choose-restaurant']}>
       <div className={style['title-line']}>
         <h1>Choisir un restaurant</h1>
         <PrimaryButton
@@ -21,4 +21,4 @@ const ChoseRestaurant = (): ReactElement => {
   )
 }
 
-export default ChoseRestaurant
+export default ChooseRestaurant
