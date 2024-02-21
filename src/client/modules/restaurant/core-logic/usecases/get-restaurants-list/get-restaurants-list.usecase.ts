@@ -15,10 +15,8 @@ const formatter = (restaurants: Restaurant[]): Restaurant[] => {
   return restaurants.map((restaurant) => {
     return {
       ...restaurant,
-      firstname: capitalizeWords(restaurant.firstname),
-      lastname: capitalizeExceptInBrackets(restaurant.lastname),
-      title: capitalizeFirstLetter(restaurant.title),
-      for: restaurant.for ? capitalizeFirstLetter(restaurant.for) : '-',
+      name: capitalizeWords(restaurant.name),
+      type: capitalizeFirstLetter(restaurant?.type),
     }
   })
 }
@@ -34,30 +32,13 @@ const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 }
 
-const capitalizeExceptInBrackets = (input: string): string => {
-  const wordRegex = /[^\s\[\]]+/g
-
-  return input.replace(wordRegex, (match) => {
-    if (match.startsWith('(') && match.endsWith(')')) {
-      return match
-    } else {
-      return match.charAt(0).toUpperCase() + match.slice(1).toUpperCase()
-    }
-  })
-}
-
 const sortRestaurants = (restaurants: Restaurant[]): Restaurant[] => {
   return restaurants.sort((a, b) => {
-    const lastNameComparison = a.lastname.localeCompare(b.lastname)
-    if (lastNameComparison !== 0) {
-      return lastNameComparison
+    const nameComparison = a.name.localeCompare(b.name)
+    if (nameComparison !== 0) {
+      return nameComparison
+    } else {
+      return 0
     }
-
-    const firstNameComparison = a.firstname.localeCompare(b.firstname)
-    if (firstNameComparison !== 0) {
-      return firstNameComparison
-    }
-
-    return a.title.localeCompare(b.title)
   })
 }
