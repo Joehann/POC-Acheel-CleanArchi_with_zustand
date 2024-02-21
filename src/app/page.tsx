@@ -1,13 +1,18 @@
 'use client'
+import EditRestaurant from '@/client/modules/work/ui/react/sections/EditRestaurantsrc'
+import RestaurantsList from '@/client/modules/work/ui/react/sections/RestaurantsListsrc'
+import useRestaurantStore from '@/client/modules/work/ui/store/restaurantStoresrc'
 import { ReactElement } from 'react'
-import WorkList from '../client/modules/work/ui/react/sections/WorksList'
-import useWorkStore from '@/client/modules/work/ui/store/workStoresrc'
 
 export default function Home() {
-  const store = useWorkStore()
+  const store = useRestaurantStore()
+
   const displayData: DisplayData = {
     list: {
-      component: WorkList,
+      component: RestaurantsList,
+    },
+    edit: {
+      component: EditRestaurant,
     },
   }
 

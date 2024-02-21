@@ -1,4 +1,4 @@
-export const works = [
+export const restaurants = [
   {
     uuid: '03a77bb5-2e60-4ed7-ab55-90faec26668f',
     firstname: 'scott',

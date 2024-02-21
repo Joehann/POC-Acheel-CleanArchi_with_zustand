@@ -1,15 +1,15 @@
-import workHttpActionsStub from '../../../infra/actions/work.action.stub'
-import getWorksList from './get-works-list.usecase'
+import restaurantHttpActionsStub from '../../../infra/actions/restaurant.action.stub'
+import getRestaurantsList from './get-restaurants-list.usecase'
 
-describe('GetWorksListUsecase', () => {
-  it('should return a formatted and sorted list of works', async () => {
-    const gateway = workHttpActionsStub
-    const works = await getWorksList(gateway)
-    expect(works).toEqual(expectedWorks)
+describe('GetRestaurantsListUsecase', () => {
+  it('should return a formatted and sorted list of restaurants', async () => {
+    const gateway = restaurantHttpActionsStub
+    const restaurants = await getRestaurantsList(gateway)
+    expect(restaurants).toEqual(expectedRestaurants)
   })
 })
 
-const expectedWorks = [
+const expectedRestaurants = [
   {
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f5a5a355h4f',
     firstname: 'Benny',

@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
 
-const CreateWork = (): ReactElement => {
+const CreateRestaurant = (): ReactElement => {
   return <></>
 }

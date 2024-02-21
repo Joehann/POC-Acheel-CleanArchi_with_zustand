@@ -1,4 +1,4 @@
-export type Work = {
+export type Restaurant = {
   uuid: string
   firstname: string
   lastname: string
