@@ -4,8 +4,7 @@ import restaurantHttpActions from '../../../infra/actions/restaurant.actions'
 import useRestaurantStore from '../../store/restaurantStore'
 
 const useRestaurantPresenter = () => {
-  const gateway = restaurantHttpActionsStub
-  // const gateway = restaurantHttpActions
+  const gateway = restaurantHttpActions
 
   const store = useRestaurantStore()
 

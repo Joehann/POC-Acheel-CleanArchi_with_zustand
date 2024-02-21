@@ -1,5 +1,18 @@
 .restaurants-list {
+  max-width: 660px;
+  margin: 40px auto;
+}
+
+.restaurants-list .title-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurants-list .list {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
 }

@@ -1,7 +1,7 @@
 export const restaurants = [
   {
     uuid: '03a77bb5-2e60-4ed7-ab55-90faec26668f',
-    name: 'Birdie',
+    name: 'birdie',
     type: 'burgers',
   },
   {
@@ -11,18 +11,18 @@ export const restaurants = [
   },
   {
     uuid: '5c4e7f6d-4e9b-4b5c-9a8d-6f5a223c7b6f',
-    name: 'McDo',
+    name: "Mc Donald's",
     type: 'fast-food',
   },
   {
     uuid: 'd6f6d7f7-4b5c-4e9b-9a8d-5c7b6f5a5a3c',
-    name: 'Frog',
-    type: 'brewery',
+    name: 'FROG',
+    type: 'brewery, pub',
   },
   {
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f12a5a354b6f',
     name: 'The Honest Lawyer',
-    type: 'brewery',
+    type: 'brewery, pub',
   },
   {
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f5a5a3784b6f',
@@ -31,7 +31,7 @@ export const restaurants = [
   },
   {
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f5a5a355h4f',
-    name: 'Zang',
-    type: 'chinese',
+    name: 'ZANG',
+    type: 'CHINESE',
   },
 ]

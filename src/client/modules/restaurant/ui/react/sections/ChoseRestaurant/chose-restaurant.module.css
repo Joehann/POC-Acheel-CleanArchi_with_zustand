@@ -1,0 +1,10 @@
+.chose-restaurant {
+  max-width: 660px;
+  margin: 40px auto;
+}
+
+.chose-restaurant .title-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
