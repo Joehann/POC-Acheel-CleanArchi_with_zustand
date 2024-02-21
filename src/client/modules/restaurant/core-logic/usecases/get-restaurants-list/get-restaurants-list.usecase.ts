@@ -1,4 +1,4 @@
-import { RestaurantGateway } from '../../gateways/restaurants.gateway'
+import { RestaurantGateway } from '../../gateways/restaurant.gateway'
 import { Restaurant } from '../../models/Restaurant'
 
 const getRestaurantsList = async (

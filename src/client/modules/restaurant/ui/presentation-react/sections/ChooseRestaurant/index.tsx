@@ -2,11 +2,12 @@ import { ReactElement } from 'react'
 import useRestaurantStore from '../../../store/restaurantStore'
 import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButtonsrc'
 import style from './choose-restaurant.module.css'
+import RestaurantCard from '../../components/cards/RestaurantCard'
+import useRestaurantPresenter from '../../presenters/useRestaurant.presenter'
 
 const ChooseRestaurant = (): ReactElement => {
   const store = useRestaurantStore()
-
-  console.log(store.restaurants)
+  const presenter = useRestaurantPresenter()
 
   return (
     <div className={style['choose-restaurant']}>
@@ -16,6 +17,20 @@ const ChooseRestaurant = (): ReactElement => {
           label="Liste des restaurants"
           onClick={() => store.setDisplay('list')}
         />
+      </div>
+      <div className={style['choose-area']}>
+        <PrimaryButton
+          label="Choisir aléatoirement"
+          onClick={presenter.handleChooseRestaurantRandomly}
+        />
+        {store.selectedRestaurant ? (
+          <RestaurantCard
+            key={store.selectedRestaurant.uuid}
+            data={store.selectedRestaurant}
+          />
+        ) : (
+          'Aucun restaurant choisi'
+        )}
       </div>
     </div>
   )

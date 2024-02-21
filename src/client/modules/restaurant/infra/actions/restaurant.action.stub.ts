@@ -1,4 +1,4 @@
-import { RestaurantGateway } from '../../core-logic/gateways/restaurants.gateway'
+import { RestaurantGateway } from '../../core-logic/gateways/restaurant.gateway'
 import { Restaurant } from '../../core-logic/models/Restaurant'
 import { restaurants } from '../pool-data/restaurants.pool-data'
 
