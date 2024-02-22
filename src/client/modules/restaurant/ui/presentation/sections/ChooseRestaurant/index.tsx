@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 import useRestaurantStore from '../../../store/restaurantStore'
-import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButtonsrc'
+import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButton'
 import style from './choose-restaurant.module.css'
 import RestaurantCard from '../../components/cards/RestaurantCard'
 import useRestaurantPresenter from '../../presenters/useRestaurant.presenter'
@@ -12,7 +12,7 @@ const ChooseRestaurant = (): ReactElement => {
   return (
     <div className={style['choose-restaurant']}>
       <div className={style['title-line']}>
-        <h1>Choisir un restaurant</h1>
+        <h1>Vous voulez manger quoi ?</h1>
         <PrimaryButton
           label="Liste des restaurants"
           onClick={() => store.setDisplay('list')}

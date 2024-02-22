@@ -1,10 +1,10 @@
-import { restaurants } from '@/client/modules/restaurant/infra/pool-data/restaurants.pool-datasrc'
+import { restaurants } from '@/client/modules/restaurant/infra/pool-data/restaurants.pool-data'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const otherRestaurants = [
   {
     uuid: '1a9bafc0-4203-489b-803a-aee336404648',
-    name: 'burger king',
+    name: 'five guys',
     type: 'fast-food',
   },
   {

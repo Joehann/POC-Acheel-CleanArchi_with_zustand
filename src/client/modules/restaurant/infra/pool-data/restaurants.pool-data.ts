@@ -6,8 +6,8 @@ export const restaurants = [
   },
   {
     uuid: '37287d87-58c9-485b-89c0-1a8035067ba8',
-    name: 'Ozio',
-    type: 'italian',
+    name: 'OZIO',
+    type: 'ITALIAN',
   },
   {
     uuid: '5c4e7f6d-4e9b-4b5c-9a8d-6f5a223c7b6f',
@@ -21,7 +21,7 @@ export const restaurants = [
   },
   {
     uuid: 'e7f6d6d7-5c4e-4e9b-9a8d-6f12a5a354b6f',
-    name: 'The Honest Lawyer',
+    name: 'Honest',
     type: 'brewery, pub',
   },
   {
