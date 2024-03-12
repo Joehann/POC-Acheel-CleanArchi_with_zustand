@@ -2,7 +2,7 @@
 import RestaurantCard from '../../components/cards/RestaurantCard'
 import style from './restaurants-list.module.css'
 import useRestaurantStore from '../../../store/restaurantStore'
-import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButton'
+import PrimaryButton from '@/client/common/react/components/buttons/PrimaryButton'
 
 const RestaurantsList = () => {
   const store = useRestaurantStore()

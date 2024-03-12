@@ -1,7 +1,7 @@
 import { RestaurantGateway } from '../../gateways/restaurant.gateway'
 import { Restaurant } from '../../models/Restaurant'
 
-const getRestaurantsList = async (
+const retrieveRestaurantsList = async (
   gateway: RestaurantGateway
 ): Promise<Restaurant[]> => {
   const restaurants = await gateway.getRestaurants()
@@ -9,7 +9,7 @@ const getRestaurantsList = async (
   return sortRestaurants(formattedRestaurants)
 }
 
-export default getRestaurantsList
+export default retrieveRestaurantsList
 
 const formatter = (restaurants: Restaurant[]): Restaurant[] => {
   return restaurants.map((restaurant) => {

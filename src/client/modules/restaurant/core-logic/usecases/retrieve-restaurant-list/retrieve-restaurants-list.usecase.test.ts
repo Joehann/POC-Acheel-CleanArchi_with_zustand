@@ -1,10 +1,10 @@
-import restaurantHttpActionsStub from '../../../infra/actions/restaurant.action.stub'
-import getRestaurantsList from './get-restaurants-list.usecase'
+import restaurantHttpActionsStub from '../../../infra/actions/restaurant.actions.stub'
+import retrieveRestaurantsList from './retrieve-restaurants-list.usecase'
 
 describe('GetRestaurantsListUsecase', () => {
-  it('should return a formatted and sorted list of restaurants', async () => {
+  it('should retrieve and return a formatted and sorted list of restaurants', async () => {
     const gateway = restaurantHttpActionsStub
-    const restaurants = await getRestaurantsList(gateway)
+    const restaurants = await retrieveRestaurantsList(gateway)
     expect(restaurants).toEqual(expectedRestaurants)
   })
 })

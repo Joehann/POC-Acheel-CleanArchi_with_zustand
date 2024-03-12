@@ -6,6 +6,9 @@ const restaurantHttpActionsStub: RestaurantGateway = {
   getRestaurants: async (): Promise<Restaurant[]> => {
     return restaurants
   },
+  addRestaurant: async (restaurant: Restaurant): Promise<void> => {
+    restaurants.push(restaurant)
+  },
 }
 
 export default restaurantHttpActionsStub

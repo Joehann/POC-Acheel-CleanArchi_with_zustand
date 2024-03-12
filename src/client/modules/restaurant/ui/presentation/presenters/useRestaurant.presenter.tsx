@@ -1,6 +1,6 @@
 import chooseRestaurant from '../../../core-logic/usecases/choose-restaurant/choose-restaurant.usecase'
-import getRestaurantsList from '../../../core-logic/usecases/get-restaurants-list/get-restaurants-list.usecase'
-import restaurantHttpActionsStub from '../../../infra/actions/restaurant.action.stub'
+import retrieveRestaurantsList from '../../../core-logic/usecases/retrieve-restaurant-list/retrieve-restaurants-list.usecase'
+import restaurantHttpActionsStub from '../../../infra/actions/restaurant.actions.stub'
 import restaurantHttpActions from '../../../infra/actions/restaurant.actions'
 import randomArrayIndexProvider from '../../../infra/providers/randomArrayIndexProvider'
 import useRestaurantStore from '../../store/restaurantStore'
@@ -12,7 +12,7 @@ const useRestaurantPresenter = () => {
   const store = useRestaurantStore()
 
   const handleGetRestaurants = async () => {
-    const res = await getRestaurantsList(gateway)
+    const res = await retrieveRestaurantsList(gateway)
     store.setRestaurants(res)
   }
 
