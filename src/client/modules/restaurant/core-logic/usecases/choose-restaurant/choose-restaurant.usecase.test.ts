@@ -1,4 +1,4 @@
-import { restaurants } from '../../../infra/pool-data/restaurants.pool-data'
+import { restaurants } from '../../../infra/in-memory/restaurants.in-memory'
 import chooseRestaurant from './choose-restaurant.usecase'
 
 describe('Choose Restaurant Usecase', () => {

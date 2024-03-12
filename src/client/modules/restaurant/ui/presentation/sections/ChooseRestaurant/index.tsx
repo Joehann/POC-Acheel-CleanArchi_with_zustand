@@ -1,9 +1,9 @@
 import { ReactElement } from 'react'
 import useRestaurantStore from '../../../store/restaurantStore'
-import PrimaryButton from '@/client/core-react/components/buttons/PrimaryButton'
 import style from './choose-restaurant.module.css'
 import RestaurantCard from '../../components/cards/RestaurantCard'
 import useRestaurantPresenter from '../../presenters/useRestaurant.presenter'
+import PrimaryButton from '@/client/common/react/components/buttons/PrimaryButton'
 
 const ChooseRestaurant = (): ReactElement => {
   const store = useRestaurantStore()

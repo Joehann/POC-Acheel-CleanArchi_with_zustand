@@ -1,4 +1,4 @@
-import { restaurants } from '@/client/modules/restaurant/infra/pool-data/restaurants.pool-data'
+import { restaurants } from '@/client/modules/restaurant/infra/in-memory/restaurants.in-memory'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const otherRestaurants = [
