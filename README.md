@@ -1,3 +1,8 @@
+## Clean architecture using React (in a NextJS project) and Zustand as store manager.
+
+After several months' training on clean architecture in the frontend, I created this small project as a POC to bring the subject to Acheel. 
+Following my presentation, we gradually began to move towards an architecture that increasingly respects SOLID principles by extracting logic from React components
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +39,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# POC-Acheel-CleanArchi_with_zustand
