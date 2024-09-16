@@ -19,5 +19,5 @@ type RestaurantStoreType = {
   restaurants: Restaurant[]
   setRestaurants: (restaurants: Restaurant[]) => void
   selectedRestaurant: Restaurant | null
-  setSelectedRestaurant: (selectedRestaurant: Restaurant) => void
+  setSelectedRestaurant: (selectedRestaurant: Restaurant | null) => void
 }

@@ -1,9 +1,9 @@
-import chooseRestaurant from '../../../core-logic/usecases/choose-restaurant/choose-restaurant.usecase'
-import retrieveRestaurantsList from '../../../core-logic/usecases/retrieve-restaurant-list/retrieve-restaurants-list.usecase'
-import restaurantHttpActionsStub from '../../../infra/actions/restaurant.actions.stub'
-import restaurantHttpActions from '../../../infra/actions/restaurant.actions'
-import randomArrayIndexProvider from '../../../infra/providers/randomArrayIndexProvider'
-import useRestaurantStore from '../../store/restaurantStore'
+import chooseRestaurant from "../../../core-logic/usecases/choose-restaurant/choose-restaurant.usecase"
+import retrieveRestaurantsList from "../../../core-logic/usecases/retrieve-restaurant-list/retrieve-restaurants-list.usecase"
+import restaurantHttpActionsStub from "../../../infra/actions/restaurant.actions.stub"
+import restaurantHttpActions from "../../../infra/actions/restaurant.actions"
+import randomArrayIndexProvider from "../../../infra/providers/randomArrayIndexProvider"
+import useRestaurantStore from "../../store/restaurantStore"
 
 const useRestaurantPresenter = () => {
   const gateway = restaurantHttpActions
@@ -22,9 +22,14 @@ const useRestaurantPresenter = () => {
     store.setSelectedRestaurant(chosenRestaurant)
   }
 
+  const handleResetRestaurant = () => {
+    store.setSelectedRestaurant(null)
+  }
+
   return {
     handleGetRestaurants,
     handleChooseRestaurantRandomly,
+    handleResetRestaurant,
   }
 }
 
