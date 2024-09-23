@@ -22,6 +22,12 @@ const RestaurantsList = () => {
           <RestaurantCard key={u.uuid} data={u} />
         ))}
       </div>
+      <div className={style['add-restaurant']}>
+        <PrimaryButton
+          label="Ajouter un restaurant"
+          onClick={() => store.setDisplay('create')}
+        />
+      </div>
     </div>
   )
 }

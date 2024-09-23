@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import useRestaurantPresenter from "@/client/modules/restaurant/ui/presentation/presenters/useRestaurant.presenter"
 import ChooseRestaurant from "@/client/modules/restaurant/ui/presentation/sections/ChooseRestaurant"
+import CreateRestaurant from "@/client/modules/restaurant/ui/presentation/sections/CreateRestaurant"
 import RestaurantsList from "@/client/modules/restaurant/ui/presentation/sections/RestaurantsList"
 import useRestaurantStore from "@/client/modules/restaurant/ui/store/restaurantStore"
 import { ReactElement, useEffect } from "react"
@@ -15,20 +16,17 @@ export default function Home() {
   }, [])
 
   const displayData: DisplayData = {
-    choose: {
-      component: ChooseRestaurant,
-    },
-    list: {
-      component: RestaurantsList,
-    },
+    choose:  ChooseRestaurant,
+    list: RestaurantsList,
+    create: CreateRestaurant,
+    
   }
 
-  const Component = displayData[store.display].component
+  const Component = displayData[store.display]
   return <Component />
 }
 
 type DisplayData = {
-  [uuid: string]: {
-    component: () => ReactElement
-  }
+  [key in 'choose' | 'list' | 'create']: () => ReactElement
+  
 }

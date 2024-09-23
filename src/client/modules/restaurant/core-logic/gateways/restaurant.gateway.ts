@@ -2,5 +2,5 @@ import { Restaurant } from '../models/Restaurant'
 
 export interface RestaurantGateway {
   getRestaurants(): Promise<Restaurant[]>
-  addRestaurant(restaurant: Restaurant): Promise<void>
+  createRestaurant(restaurant: Omit<Restaurant, 'uuid'>, uuidProvider: () => string): Promise<void>
 }

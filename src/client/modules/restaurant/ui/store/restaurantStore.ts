@@ -14,8 +14,8 @@ const useRestaurantStore = create<RestaurantStoreType>((set) => ({
 export default useRestaurantStore
 
 type RestaurantStoreType = {
-  display: "list" | "choose"
-  setDisplay: (display: "list" | "choose") => void
+  display: "list" | "choose" | "create"
+  setDisplay: (display: "list" | "choose" | "create") => void
   restaurants: Restaurant[]
   setRestaurants: (restaurants: Restaurant[]) => void
   selectedRestaurant: Restaurant | null

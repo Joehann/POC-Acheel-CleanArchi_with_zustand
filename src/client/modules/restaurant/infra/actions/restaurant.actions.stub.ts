@@ -6,7 +6,7 @@ const restaurantHttpActionsStub: RestaurantGateway = {
   getRestaurants: async (): Promise<Restaurant[]> => {
     return restaurants
   },
-  addRestaurant: async (restaurant: Restaurant): Promise<void> => {
+  createRestaurant: async (restaurant: Omit<Restaurant, 'uuid'>, uuidProvider: () => string): Promise<void> => {
     //
   },
 }

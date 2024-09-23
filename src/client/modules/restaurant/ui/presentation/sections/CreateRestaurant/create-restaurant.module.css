@@ -1,0 +1,25 @@
+.create-restaurant {
+    max-width: 660px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.create-restaurant form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 80px auto;
+    width: 400px;
+}
+
+.create-restaurant .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.create-restaurant form input {
+  padding: 10px;
+  width: 100%;
+}
