@@ -3,3 +3,5 @@ export type Restaurant = {
   name: string
   type: string
 }
+
+export type RestaurantForm = Omit<Restaurant, 'uuid'>

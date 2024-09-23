@@ -6,7 +6,7 @@ const restaurantHttpActions: RestaurantGateway = {
     const res = await fetch('http://localhost:3000/api/get-restaurants')
     return await res.json()
   },
-  createRestaurant: async (restaurant: Omit<Restaurant, 'uuid'>): Promise<void> => {
+  createRestaurant: async (restaurant: Restaurant): Promise<void> => {
     await fetch('http://localhost:3000/api/add-restaurant', {
       method: 'POST',
       headers: {
