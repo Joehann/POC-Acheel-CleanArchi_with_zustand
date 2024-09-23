@@ -1,44 +1,15 @@
-import { RestaurantGateway } from '../../gateways/restaurant.gateway'
-import { Restaurant } from '../../models/Restaurant'
+import type { RestaurantGateway } from '../../gateways/restaurant.gateway'
+import type { Restaurant } from '../../models/Restaurant'
+import formatter from './retrieve-restaurants-list.formatter'
+import sortArrayObjectByKey from '@/client/utils/array/sortArrayByKey'
 
 const retrieveRestaurantsList = async (
   gateway: RestaurantGateway
 ): Promise<Restaurant[]> => {
   const restaurants = await gateway.getRestaurants()
   const formattedRestaurants = formatter(restaurants)
-  return sortRestaurants(formattedRestaurants)
+  const sortRestaurantsByName = sortArrayObjectByKey<Restaurant>('name')
+  return sortRestaurantsByName(formattedRestaurants)
 }
 
 export default retrieveRestaurantsList
-
-const formatter = (restaurants: Restaurant[]): Restaurant[] => {
-  return restaurants.map((restaurant) => {
-    return {
-      ...restaurant,
-      name: capitalizeWords(restaurant.name),
-      type: capitalizeFirstLetter(restaurant?.type),
-    }
-  })
-}
-
-const capitalizeWords = (str: string) => {
-  return str
-    .split(' ')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ')
-}
-
-const capitalizeFirstLetter = (str: string) => {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
-}
-
-const sortRestaurants = (restaurants: Restaurant[]): Restaurant[] => {
-  return restaurants.sort((a, b) => {
-    const nameComparison = a.name.localeCompare(b.name)
-    if (nameComparison !== 0) {
-      return nameComparison
-    } else {
-      return 0
-    }
-  })
-}
