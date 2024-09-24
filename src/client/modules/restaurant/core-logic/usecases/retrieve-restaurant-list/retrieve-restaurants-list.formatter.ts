@@ -6,8 +6,8 @@ const formatter = (restaurants: Restaurant[]): Restaurant[] => {
     return restaurants.map((restaurant) => {
       return {
         ...restaurant,
-        name: capitalizeWords(restaurant.name),
-        type: capitalizeFirstLetter(restaurant?.type),
+        name: capitalizeWords(restaurant.name) || '-',
+        type: capitalizeFirstLetter(restaurant?.type) || '-',
       }
     })
   }

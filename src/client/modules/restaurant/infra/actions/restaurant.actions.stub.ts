@@ -7,7 +7,7 @@ const restaurantHttpActionsStub: RestaurantGateway = {
     return restaurants
   },
   createRestaurant: async (restaurant: Restaurant): Promise<void> => {
-    //
+    restaurants.push(restaurant)
   },
 }
 

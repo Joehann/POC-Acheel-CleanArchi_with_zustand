@@ -16,10 +16,9 @@ export default function Home() {
   }, [])
 
   const displayData: DisplayData = {
-    choose:  ChooseRestaurant,
+    choose: ChooseRestaurant,
     list: RestaurantsList,
     create: CreateRestaurant,
-    
   }
 
   const Component = displayData[store.display]
@@ -28,5 +27,4 @@ export default function Home() {
 
 type DisplayData = {
   [key in 'choose' | 'list' | 'create']: () => ReactElement
-  
 }

@@ -6,7 +6,7 @@ import PrimaryButton from '@/client/common/react/components/buttons/PrimaryButto
 
 const RestaurantsList = () => {
   const store = useRestaurantStore()
-
+  
   if (store.restaurants.length === 0) return <p>Loading...</p>
   return (
     <div className={style['restaurants-list']}>

@@ -4,7 +4,7 @@ import restaurantHttpActionsStub from "../../../infra/actions/restaurant.actions
 import restaurantHttpActions from "../../../infra/actions/restaurant.actions"
 import randomArrayIndexProvider from "../../../infra/providers/randomArrayIndexProvider"
 import useRestaurantStore from "../../store/restaurantStore"
-import { Restaurant, RestaurantForm } from "../../../core-logic/models/Restaurant"
+import { RestaurantForm } from "../../../core-logic/models/Restaurant"
 import createNewRestaurant from "../../../core-logic/usecases/create-new-restaurant/create-new-restaurant.usecase"
 import uuidProvider from "../../../infra/providers/uuidProvider"
 
@@ -34,8 +34,9 @@ const useRestaurantPresenter: UseRestaurantPresenter = () => {
     } catch (error) {
       //TODO: handle error
     }
-
-
+    finally {
+      store.setDisplay("list")
+    }
   }
 
   const handleResetRestaurant = () => {

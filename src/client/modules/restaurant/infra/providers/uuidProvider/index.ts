@@ -1,4 +1,4 @@
-const uuidProvider = () => {
+const uuidProvider = (): string => {
   return crypto.randomUUID()
 }
 
